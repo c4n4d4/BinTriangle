@@ -1,6 +1,6 @@
 # BinTriangle
 <h4>Customizable animate music-visualizer like on 0chan.hk</h4><br>
-<center><a href="//c4n4d4.hol.es/">>>>DEMO<<<</a></center><br><br>
+<a href="http://c4n4d4.hol.es/">DEMO</a><br><br>
 For turn pattern-edit mode, write in "F12 console": editmode();<br>
 ll loops must be in .ogg format! Files isn't included into loops folder, add yours :)<br>
 <h5>GNU GENERAL PUBLIC LICENSE, Version 2, June 1991 (license.txt)<br>
