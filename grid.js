@@ -3,17 +3,17 @@ GNU GENERAL PUBLIC LICENSE, Version 2, June 1991 (license.txt)
 Copyright by @c4n4d4, @Juribiyan, 0chan.cf, nullch.org, 0chan.hk and tracks/loops authors (for rights holders: write me about your stuff to c4n4d4@yandex.ru)
 */
 
-var loops = [ 		//All loops was renamed from *.ogg in *.loop (troubles with copyrights LOL)
-    { url: 'chrissu_and_rawfull_panorama.loop' },
-    { url: 'crystal_castles_crimewave.loop' },
-    { url: 'cutline_die_for_you_shock_one_remix.loop' },
-    { url: 'london_elektricity_had_a_little_fight.loop' },
-    { url: 'massive_attack_paradise_circus_zeds_dead_remix.loop' },
-    { url: 'mata_beach_sand_original_mix.loop' },
-    { url: 'metrik_your_world.loop' },
-    { url: 'modified_motion_1up.loop' },
-    { url: 'monsta_holdin_on_skrillex_and_nero_remix.loop' },
-    { url: 'sigur_ros_saeglopur_enigma_remix.loop' },
+var loops = [ 		//All loops must be in .ogg format!
+    { url: 'chrissu_and_rawfull_panorama.ogg' },
+    { url: 'crystal_castles_crimewave.ogg' },
+    { url: 'cutline_die_for_you_shock_one_remix.ogg' },
+    { url: 'london_elektricity_had_a_little_fight.ogg' },
+    { url: 'massive_attack_paradise_circus_zeds_dead_remix.ogg' },
+    { url: 'mata_beach_sand_original_mix.ogg' },
+    { url: 'metrik_your_world.ogg' },
+    { url: 'modified_motion_1up.ogg' },
+    { url: 'monsta_holdin_on_skrillex_and_nero_remix.ogg' },
+    { url: 'sigur_ros_saeglopur_enigma_remix.ogg' },
 ];
 
 var urlprefix = "/loops/"; 		//folder with loops
@@ -177,7 +177,7 @@ $(document).ready(function() {
     });
 });
 
-function editmode() {		//function for turn patterns-edit mode (write in "F12 console": editmode();)
+function editmode() {		//function for turn pattern-edit mode (write in "F12 console": editmode();)
     $('#nullgrid').off('click');
     effect = false;
     $('#palette').slideDown();
@@ -248,13 +248,13 @@ audio.loadLoop = function(immed, n) {
     }
     else {
         var reduced = (loops.length == 1) ? loops : loops.filter(function(e){return e!==currentLoop});
-        newLoop = reduced[Math.floor(Math.random() * reduced.length)];		//randomize loop
+        newLoop = reduced[Math.floor(Math.random() * reduced.length)];		//randomized loops
     }
 	var req = new XMLHttpRequest();
     req.open('GET', urlprefix+newLoop.url, true);
     req.responseType = 'arraybuffer';
     req.onload = function() {
-        $('#nullgrid').hover(audio.play,audio.stop);		//method for play and stop loops (default - hover)
+        $('#nullgrid').hover(audio.play,audio.stop);		//method for playing loops (default: hover)
         $('#nullgrid').resample(defaultPattern);		//pattern (customizable in index.php)
         audio.context.decodeAudioData(
             req.response,
@@ -401,7 +401,7 @@ VisualizerSample.prototype.draw = function() {
 		var percent = value/256;
         
         if(percent > (bars.treshold - normalizer) && !(i % bars.trimmingConstant)) {
-            $($('.a-cell')[ i + Math.floor(Math.random()*bars.trimmingConstant) ]).flash();		//math randomize grid-flashing
+            $($('.a-cell')[ i + Math.floor(Math.random()*bars.trimmingConstant) ]).flash();		//math randomized grid-flashing
         }
 		var height = bars.height * percent;
 		var y = Math.ceil(bars.height - height);
