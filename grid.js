@@ -1,22 +1,18 @@
 /*
 GNU GENERAL PUBLIC LICENSE, Version 2, June 1991 (license.txt)
-Copyright by @c4n4d4, @Juribiyan, 0chan.cf, nullch.org, 0chan.hk and tracks/loops authors (for rights holders: write me about your stuff to c4n4d4@yandex.ru)
+Copyright by @c4n4d4, @Juribiyan, 0chan.cf, nullch.org, 0chan.hk (for rights holders: write me about yours stuff to c4n4d4@yandex.ru)
 */
 
-var loops = [ 		//All loops must be in .ogg format!
-    { url: 'chrissu_and_rawfull_panorama.ogg' },
-    { url: 'crystal_castles_crimewave.ogg' },
-    { url: 'cutline_die_for_you_shock_one_remix.ogg' },
-    { url: 'london_elektricity_had_a_little_fight.ogg' },
-    { url: 'massive_attack_paradise_circus_zeds_dead_remix.ogg' },
-    { url: 'mata_beach_sand_original_mix.ogg' },
-    { url: 'metrik_your_world.ogg' },
-    { url: 'modified_motion_1up.ogg' },
-    { url: 'monsta_holdin_on_skrillex_and_nero_remix.ogg' },
-    { url: 'sigur_ros_saeglopur_enigma_remix.ogg' },
+var loops = [ 		//All loops must be in .ogg format! Files isn't included into loops folder, add yours :)
+    { url: 'this_is_just_text_0.ogg' },
+    { url: 'this_is_just_text_1.ogg' },
+    { url: 'this_is_just_text_2.ogg' },
+    { url: 'this_is_just_text_3.ogg' },
+    { url: 'this_is_just_text_4.ogg' },
+    { url: 'and_more_more_more_files.ogg' },
 ];
 
-var urlprefix = "/loops/"; 		//folder with loops
+var urlprefix = "/loops/"; 		//link/folder with loops
 
 var Grid = {
     genGrid: function(h, v, pattern) {
